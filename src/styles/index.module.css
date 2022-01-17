@@ -1,0 +1,66 @@
+.content {
+    margin-top: auto;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.content > ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.content > ul li {
+    border-radius: 5px;
+    padding: 0.25rem 1rem;
+    transition: ease-in-out 0.25s;
+}
+
+.content > ul li:nth-of-type(1) {
+    background-color: #9933ff;
+}
+
+.content > ul li:nth-of-type(2) {
+    background: #FF4500;
+}
+
+.content > ul li > a {
+    display: flex;
+    align-items: center;
+}
+
+.footer {
+    width: 100vw;
+    height: 100px;
+    text-align: center;
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.footer > div > a > svg {
+    font-size: 2.5rem;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons > a {
+    display: flex;
+    align-items: center;
+    transition: ease-in-out 0.25s;
+}
+
+.icons > a:hover, .content > ul li:hover {
+    transform: scale(1.1);
+    transition: ease-in-out 0.25s;
+}
