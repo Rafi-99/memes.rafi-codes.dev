@@ -13,8 +13,8 @@ export default async function handler(request, response) {
         const data = await redditFetch.json();
 
         if (redditFetch.ok && data[0] !== undefined) {
-            const { title, permalink, url: image, score, num_comments } = data[0].data.children[0].data;
-            response.status(200).json({ title, url: `https://www.reddit.com${permalink}`, image, score, num_comments });
+            const { title, permalink, url: image, score, num_comments: comments } = data[0].data.children[0].data;
+            response.status(200).json({ title, url: `https://www.reddit.com${permalink}`, image, score, comments });
         }
         else {
             const message = redditFetch.status === 403 ? 'Unable to access subreddit. Forbidden response from Reddit.' : 'Subreddit not found. Please try again with a valid query.';
