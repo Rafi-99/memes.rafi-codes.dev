@@ -2,14 +2,7 @@ export default async function handler(request, response) {
     const { subreddit } = request.query;
 
     try {
-        const redditFetch = await fetch(`https://www.reddit.com/r/${subreddit}/random.json`, {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json',
-            }
-        });
-
+        const redditFetch = await fetch(`https://www.reddit.com/r/${subreddit}/random.json`);
         const data = await redditFetch.json();
 
         if (redditFetch.ok && data[0] !== undefined) {
@@ -22,6 +15,6 @@ export default async function handler(request, response) {
         }
     }
     catch (error) {
-        response.status(500).json({ error: `${error.name}: ${error.message}`, message:'Something went wrong. Please try again with a valid query.' });
+        response.status(500).json({ error: `${error.name}: ${error.message}`, message: 'Something went wrong. Please try again with a valid query.' });
     }
 };

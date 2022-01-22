@@ -8,8 +8,10 @@ export default function Home() {
     return (
         <>
             <Head>
+                <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, shrink-to-fit=no, viewport-fit=cover' />
+                <meta name='description' content='Next.js Meme API' />
                 <title>Meme API | Home</title>
-                <link rel="icon" href="/favicon.ico" />
+                <link rel='icon' href='/favicon.ico' />
             </Head>
 
             <div className={styles.content}>
@@ -18,9 +20,9 @@ export default function Home() {
                 <p>Supported meme sources are listed below: </p>
                 <ul>
                     <li><Link href='https://giphy.com/'><a rel='noopener noreferrer' target='_blank' aria-label='Link to Giphy'><SiGiphy />&nbsp;Giphy</a></Link></li>
-                    <li><Link href='https://giphy.com/'><a rel='noopener noreferrer' target='_blank' aria-label='Link to Reddit'><SiReddit />&nbsp;Reddit</a></Link></li>
+                    <li><Link href='https://reddit.com/'><a rel='noopener noreferrer' target='_blank' aria-label='Link to Reddit'><SiReddit />&nbsp;Reddit</a></Link></li>
                 </ul>
-                <Image src="https://media.giphy.com/media/IwAZ6dvvvaTtdI8SD5/giphy.gif" alt="Random meme from The Office" width={480} height={400} />
+                <Image src='https://media.giphy.com/media/IwAZ6dvvvaTtdI8SD5/giphy.gif' alt='Random meme from The Office' width={480} height={400} />
                 <p>Enjoy indulging on the memes!</p>
             </div>
         </>
