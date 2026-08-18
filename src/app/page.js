@@ -2,6 +2,10 @@ import Link from 'next/link';
 import { SiGiphy } from 'react-icons/si';
 import styles from '@styles/page/index.module.css';
 
+export const metadata = {
+    title: 'Home'
+};
+
 export default function Home() {
     return (
         <div className='page'>
@@ -10,7 +14,7 @@ export default function Home() {
                     <span className={styles.user}>rafi@meme-api</span><span className={styles.path}>:~$</span>
                 </Link>
             </h1>
-            
+
             <p className='page-tagline'>Random memes. On demand. For everyone.</p>
 
             <div className={styles.sources}>

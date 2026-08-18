@@ -3,7 +3,7 @@ import { endpoints, groupByProvider } from '@/utils/Endpoints';
 import styles from '@styles/page/docs.module.css';
 
 export const metadata = {
-    title: 'Meme API | Docs'
+    title: 'Docs'
 };
 
 export default function Docs() {

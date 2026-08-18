@@ -2,7 +2,7 @@ import Link from 'next/link';
 import MemeTester from '@components/MemeTester';
 
 export const metadata = {
-    title: 'Meme API | Test'
+    title: 'Test'
 };
 
 export default function Test() {
