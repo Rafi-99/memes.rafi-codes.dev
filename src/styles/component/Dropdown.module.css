@@ -1,0 +1,83 @@
+.dropdown {
+    position: relative;
+}
+
+.dropdownTrigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    color: var(--text-bright);
+    font-family: inherit;
+    font-size: var(--text-base);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s ease;
+}
+
+.triggerLabel {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.dropdownTrigger:focus,
+.dropdownTrigger:hover {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.chevron {
+    flex-shrink: 0;
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    transition: transform 0.2s ease;
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+.dropdownList {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    right: 0;
+    z-index: 10;
+    margin: 0;
+    padding: 0.35rem;
+    list-style: none;
+    background: var(--bg-raised);
+    border: 1px solid var(--border-bright);
+    border-radius: var(--radius);
+    box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6);
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.dropdownOption {
+    padding: 0.55rem 0.7rem;
+    border-radius: calc(var(--radius) - 3px);
+    font-size: var(--text-base);
+    color: var(--text-bright);
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+}
+
+.dropdownOption:hover {
+    background: var(--bg-terminal);
+}
+
+.dropdownOptionActive {
+    color: var(--accent);
+}

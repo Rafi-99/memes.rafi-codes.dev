@@ -1,7 +1,13 @@
 const nextConfig = {
+    reactCompiler: true,
     reactStrictMode: true,
     images: {
-        domains: ['media.giphy.com']
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'media.giphy.com'
+            }
+        ]
     }
 };
 

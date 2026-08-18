@@ -1,0 +1,88 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    width: 100%;
+    text-align: left;
+}
+
+.sectionHeading {
+    margin: 0;
+    color: var(--accent-color);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+}
+
+.card {
+    padding: 0.85rem 1rem;
+    background: var(--bg-raised);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent-color);
+    border-radius: var(--radius);
+}
+
+.cardHead {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.method {
+    flex-shrink: 0;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    background: var(--accent-color);
+    color: var(--bg);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+}
+
+.cardHead code {
+    font-family: inherit;
+    font-size: var(--text-base);
+    color: var(--text-bright);
+}
+
+.description {
+    margin: 0.4rem 0 0;
+    color: var(--text-muted);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+}
+
+.params {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.6rem;
+}
+
+.param {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.25rem 0.55rem;
+    background: var(--bg-terminal);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: var(--text-xs);
+}
+
+.paramName {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.paramExample {
+    color: var(--text-dim);
+}
