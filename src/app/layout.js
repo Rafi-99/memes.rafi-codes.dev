@@ -1,5 +1,6 @@
 import { JetBrains_Mono } from 'next/font/google';
 import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Footer from '@components/Footer';
 import '@styles/global/globals.css';
 
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
                 <main>{children}</main>
                 <Footer />
                 <Analytics />
+                <SpeedInsights />
             </body>
         </html>
     );
